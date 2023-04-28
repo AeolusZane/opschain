@@ -1,0 +1,60 @@
+{
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true
+  },
+  "globals": {
+    "window": true,
+    "$": true,
+    "WebUI": true,
+    "BI": true,
+    "Data": true,
+    "Fix": true,
+    "module": true,
+    "Demo": true,
+    "_global": true,
+    "REQUEST_ENVIRONMENT": true,
+    "Dec": true,
+    "DecCst": true,
+    "Ops": true,
+    "NodeJS": true,
+    "Obj": true,
+    "Widget": true,
+    "AppendProps": true,
+    "Mock": true
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "modules": true
+    }
+  },
+  "plugins": ["@typescript-eslint/eslint-plugin", "prettier"],
+  "overrides": [
+    {
+      "files": ["*.ts", "**/*.ts", "*.tsx", "**/*.tsx"],
+      "rules": {
+        "no-param-reassign": 0,
+        "no-use-before-define": "off",
+        "@typescript-eslint/no-extra-parens": ["off"],
+        "lines-around-comment": ["off"],
+        "default-case": ["off"],
+        "radix": ["off"],
+        "prettier/prettier": [
+          "warn",
+          {
+            "singleQuote": true,
+            "trailingComma": "all",
+            "printWidth": 120,
+            "tabWidth": 4,
+            "endOfLine": "auto"
+          }
+        ]
+      },
+      "extends": ["plugin:@fui/esnext", "plugin:@fui/typescript"]
+    }
+  ]
+}
